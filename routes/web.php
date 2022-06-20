@@ -22,8 +22,8 @@ use App\Models\Post;
 Route::get('/', function () {
     return view('auth.login');
 });
-//Auth::routes();
-Auth::routes(['register'=>false]);
+Auth::routes();
+//Auth::routes(['register'=>false]);
 
 //Route::get('/{page}', 'AdminController@index');
 
@@ -65,9 +65,13 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
     Route::get('export_comptes', [PostController::class, 'export']);
     Route::get('import_comptes', [PostController::class, 'import']);
+
+    Route::get('/signup', function () {
+        return view('auth.register');
+    });
     
     //Route::view('/signup' , 'your.view.path')->name('auth.signup');
-    //Route::post('/signup' , 'AuthController@postSignup')->name('auth.signup.post');
+   // Route::post('/signup' , 'AuthController@postSignup')->name('auth.signup.post');
     //Route::view('/login' , 'your.view.path')->name('auth.login');
     //Route::post('/login' , 'AuthController@postLogin')->name('auth.login.post');
     
