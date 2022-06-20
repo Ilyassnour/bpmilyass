@@ -1,7 +1,7 @@
 @extends('layouts.master2')
 
 @section('title')
-تسجيل الدخول - مورا سوفت للادارة القانونية
+login/signup
 @stop
 
 
@@ -10,22 +10,21 @@
 <link href="{{URL::asset('assets/plugins/sidemenu-responsive-tabs/css/sidemenu-responsive-tabs.css')}}" rel="stylesheet">
 @endsection
 @section('content')
+<br><br>
 		<div class="container-fluid">
-			<div class="row no-gutter">
+	
 				<!-- The image half -->
 				<!-- The content half -->
-				<div class="col-md-6 col-lg-6 col-xl-5 bg-white">
+				<div >
 					<div class="login d-flex align-items-center py-2">
 						<!-- Demo content-->
 						<div class="container p-0">
-							<div class="row">
-								<div class="col-md-10 col-lg-10 col-xl-9 mx-auto">
+						  <h2> Bien venue a BPM</h2>
+								<div class="col-md-20 col-lg-20 col-xl-19 mx-auto">
 									<div class="card-sigin">
-										<div class="mb-5 d-flex"> <a href="{{ url('/' . $page='Home') }}"><img src="{{URL::asset('assets/img/brand/favicon.png')}}" class="sign-favicon ht-40" alt="logo"></a><h1 class="main-logo1 ml-1 mr-0 my-auto tx-28">Suivez<span>Comptes</span>BPM</h1></div>
 										<div class="card-sigin">
-											<div class="main-signup-header">
-												<h2>Bienvenue a BPM Bank</h2>
-												<h5 class="font-weight-semibold mb-4">Se connecter</h5>
+											<div class="container-fluid">
+                                               <div class="card">
                                                 <form method="POST" action="{{ route('login') }}">
                                                  @csrf
 													<div class="form-group">
@@ -64,6 +63,10 @@
                                                     {{ __('Se connecter') }}
                                                     </button>
 												</form>
+                             <br>
+												
+													 <a href="/signup" class="btn btn-main-primary btn-block"
+           style="color:black"><i class=""></i> &nbsp;signup</a>
 											</div>
 										</div>
 									</div>
@@ -73,13 +76,7 @@
 					</div>
 				</div><!-- End -->
 
-                <div class="col-md-6 col-lg-6 col-xl-7 d-none d-md-flex bg-primary-transparent">
-					<div class="row wd-100p mx-auto text-center">
-						<div class="col-md-12 col-lg-12 col-xl-12 my-auto mx-auto wd-100p">
-							<img src="{{URL::asset('assets/img/brand/favicon.png')}}" class="my-auto ht-xl-80p wd-md-100p wd-xl-80p mx-auto" alt="logo">
-						</div>
-					</div>
-				</div>
+              
 
 			</div>
 		</div>
