@@ -1,7 +1,7 @@
 @extends('layouts.master2')
 
 @section('title')
-login/signup
+LOGIN 
 @stop
 
 
@@ -10,21 +10,21 @@ login/signup
 <link href="{{URL::asset('assets/plugins/sidemenu-responsive-tabs/css/sidemenu-responsive-tabs.css')}}" rel="stylesheet">
 @endsection
 @section('content')
-<br><br>
 		<div class="container-fluid">
-	
+			
 				<!-- The image half -->
 				<!-- The content half -->
-				<div >
+				<div class="col-md-15 col-lg-15 col-xl-15 bg-white">
 					<div class="login d-flex align-items-center py-2">
 						<!-- Demo content-->
 						<div class="container p-0">
-						  <h2> Bien venue a BPM</h2>
-								<div class="col-md-20 col-lg-20 col-xl-19 mx-auto">
+							<div >
+								<div class="col-md-10 col-lg-10 col-xl-9 mx-auto">
 									<div class="card-sigin">
+										<div class="mb-5 d-flex"> <a href="{{ url('/' . $page='Home') }}"><img src="{{URL::asset('assets/img/brand/favicon.png')}}" class="sign-favicon ht-40" alt="logo"></a><h1 class="main-logo1 ml-1 mr-0 my-auto tx-28"><span>Bienvenue a la banque BPM</span></h1></div>
 										<div class="card-sigin">
-											<div class="container-fluid">
-                                               <div class="card">
+											<div class="main-signup-header">
+											
                                                 <form method="POST" action="{{ route('login') }}">
                                                  @csrf
 													<div class="form-group">
@@ -63,10 +63,6 @@ login/signup
                                                     {{ __('Se connecter') }}
                                                     </button>
 												</form>
-                             <br>
-												
-													 <a href="/signup" class="btn btn-main-primary btn-block"
-           style="color:black"><i class=""></i> &nbsp;signup</a>
 											</div>
 										</div>
 									</div>
@@ -76,7 +72,7 @@ login/signup
 					</div>
 				</div><!-- End -->
 
-              
+                
 
 			</div>
 		</div>
